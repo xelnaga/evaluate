@@ -1,0 +1,17 @@
+apply plugin: 'groovy'
+
+repositories {
+
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile 'org.codehaus.groovy:groovy-all:2.3.1',
+                'org.spockframework:spock-core:0.7-groovy-2.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
