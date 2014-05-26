@@ -4,12 +4,12 @@ import spock.lang.Specification
 import spock.lang.Unroll
 
 @Unroll
-class ExpressionTokenizerSpec extends Specification {
+class TokenizerSpec extends Specification {
 
-    ExpressionTokenizer tokenizer
+    Tokenizer tokenizer
 
     void setup() {
-        tokenizer = new ExpressionTokenizer()
+        tokenizer = new Tokenizer()
     }
 
     def 'tokenize [#expression]'() {

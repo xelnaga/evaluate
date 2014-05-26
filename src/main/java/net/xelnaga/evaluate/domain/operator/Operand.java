@@ -1,10 +1,10 @@
 package net.xelnaga.evaluate.domain.operator;
 
-public class Operator implements Symbol {
+public class Operand implements Symbol {
 
     private String value;
 
-    public Operator(String value) {
+    public Operand(String value) {
         this.value = value;
     }
 
@@ -19,9 +19,9 @@ public class Operator implements Symbol {
             return false;
         }
 
-        Operator operator = (Operator) obj;
+        Operand operand = (Operand) obj;
 
-        return value.equals(operator.value);
+        return value.equals(operand.value);
     }
 
     @Override

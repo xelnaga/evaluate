@@ -3,7 +3,7 @@ package net.xelnaga.evaluate.domain.expression;
 import java.util.Arrays;
 import java.util.List;
 
-public class ExpressionTokenizer {
+public class Tokenizer {
 
     public List<String> tokenize(String expression) {
 
