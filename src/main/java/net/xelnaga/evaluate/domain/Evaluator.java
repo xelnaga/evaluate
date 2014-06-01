@@ -2,7 +2,7 @@ package net.xelnaga.evaluate.domain;
 
 import net.xelnaga.evaluate.domain.expression.Symbolizer;
 import net.xelnaga.evaluate.domain.expression.Tokenizer;
-import net.xelnaga.evaluate.domain.operator.Symbol;
+import net.xelnaga.evaluate.domain.symbol.Symbol;
 
 import java.math.BigDecimal;
 import java.util.List;

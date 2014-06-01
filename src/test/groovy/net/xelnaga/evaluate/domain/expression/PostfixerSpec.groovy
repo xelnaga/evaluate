@@ -1,6 +1,6 @@
 package net.xelnaga.evaluate.domain.expression
 
-import net.xelnaga.evaluate.domain.operator.Operand;
+import net.xelnaga.evaluate.domain.symbol.operand.Operand;
 import spock.lang.Specification
 import spock.lang.Unroll;
 

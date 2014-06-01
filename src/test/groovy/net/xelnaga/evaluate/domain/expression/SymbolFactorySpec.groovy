@@ -1,7 +1,11 @@
 package net.xelnaga.evaluate.domain.expression
 
-import net.xelnaga.evaluate.domain.operator.Operand
-import net.xelnaga.evaluate.domain.operator.Operator
+import net.xelnaga.evaluate.domain.symbol.operand.Operand
+import net.xelnaga.evaluate.domain.symbol.operator.DivideOperator
+import net.xelnaga.evaluate.domain.symbol.operator.MinusOperator
+import net.xelnaga.evaluate.domain.symbol.operator.Operator
+import net.xelnaga.evaluate.domain.symbol.operator.PlusOperator
+import net.xelnaga.evaluate.domain.symbol.operator.TimesOperator
 import spock.lang.Specification
 import spock.lang.Unroll
 
@@ -33,15 +37,15 @@ class SymbolFactorySpec extends Specification {
     def 'to symbol with operator [#token]'() {
 
         expect:
-            factory.toSymbol(token) == new Operator(token)
+            factory.toSymbol(token) == operator
 
         where:
-            token << [
-                    '+',
-                    '-',
-                    '*',
-                    '/'
-            ]
+            token | operator
+            '+'   | new PlusOperator()
+            '-'   | new MinusOperator()
+            '*'   | new TimesOperator()
+            '/'   | new DivideOperator()
+
     }
 
     def 'to symbol with invalid [#token]'() {

@@ -1,8 +1,8 @@
 package net.xelnaga.evaluate.domain.expression;
 
-import net.xelnaga.evaluate.domain.operator.Operand;
-import net.xelnaga.evaluate.domain.operator.Operator;
-import net.xelnaga.evaluate.domain.operator.Symbol;
+import net.xelnaga.evaluate.domain.symbol.operand.Operand;
+import net.xelnaga.evaluate.domain.symbol.operator.*;
+import net.xelnaga.evaluate.domain.symbol.Symbol;
 
 public class SymbolFactory {
 
@@ -12,8 +12,20 @@ public class SymbolFactory {
             return new Operand(token);
         }
 
-        if (token.matches("^[\\+\\-\\*/]$")) {
-            return new Operator(token);
+        if (token.equals("+")) {
+            return new PlusOperator();
+        }
+
+        if (token.equals("-")) {
+            return new MinusOperator();
+        }
+
+        if (token.equals("*")) {
+            return new TimesOperator();
+        }
+
+        if (token.equals("/")) {
+            return new DivideOperator();
         }
 
         throw new InvalidSymbolException();

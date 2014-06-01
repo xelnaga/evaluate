@@ -1,4 +1,6 @@
-package net.xelnaga.evaluate.domain.operator;
+package net.xelnaga.evaluate.domain.symbol.operand;
+
+import net.xelnaga.evaluate.domain.symbol.Symbol;
 
 public class Operand implements Symbol {
 
