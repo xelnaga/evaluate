@@ -10,6 +10,18 @@ class MinusOperatorSpec extends Specification {
         operator = new MinusOperator()
     }
 
+    def 'is operand'() {
+
+        expect:
+            !new MinusOperator().isOperand()
+    }
+
+    def 'is operator'() {
+
+        expect:
+            new MinusOperator().isOperator()
+    }
+
     def 'to string'() {
 
         expect:

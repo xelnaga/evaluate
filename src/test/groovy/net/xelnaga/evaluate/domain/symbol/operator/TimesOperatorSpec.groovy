@@ -10,6 +10,18 @@ class TimesOperatorSpec extends Specification {
         operator = new TimesOperator()
     }
 
+    def 'is operand'() {
+
+        expect:
+            !new TimesOperator().isOperand()
+    }
+
+    def 'is operator'() {
+
+        expect:
+            new TimesOperator().isOperator()
+    }
+
     def 'to string'() {
 
         expect:

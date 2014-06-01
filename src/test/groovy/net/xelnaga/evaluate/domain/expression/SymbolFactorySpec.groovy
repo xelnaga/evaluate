@@ -3,7 +3,6 @@ package net.xelnaga.evaluate.domain.expression
 import net.xelnaga.evaluate.domain.symbol.operand.Operand
 import net.xelnaga.evaluate.domain.symbol.operator.DivideOperator
 import net.xelnaga.evaluate.domain.symbol.operator.MinusOperator
-import net.xelnaga.evaluate.domain.symbol.operator.Operator
 import net.xelnaga.evaluate.domain.symbol.operator.PlusOperator
 import net.xelnaga.evaluate.domain.symbol.operator.TimesOperator
 import spock.lang.Specification
@@ -45,7 +44,6 @@ class SymbolFactorySpec extends Specification {
             '-'   | new MinusOperator()
             '*'   | new TimesOperator()
             '/'   | new DivideOperator()
-
     }
 
     def 'to symbol with invalid [#token]'() {

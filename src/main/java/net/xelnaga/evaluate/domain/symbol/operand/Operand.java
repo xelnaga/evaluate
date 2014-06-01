@@ -11,6 +11,16 @@ public class Operand implements Symbol {
     }
 
     @Override
+    public boolean isOperand() {
+        return true;
+    }
+
+    @Override
+    public boolean isOperator() {
+        return false;
+    }
+
+    @Override
     public boolean equals(Object obj) {
 
         if (this == obj) {
@@ -29,5 +39,10 @@ public class Operand implements Symbol {
     @Override
     public int hashCode() {
         return value.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return value;
     }
 }

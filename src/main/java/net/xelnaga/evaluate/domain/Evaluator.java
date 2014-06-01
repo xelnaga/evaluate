@@ -23,7 +23,7 @@ public class Evaluator {
     public BigDecimal evaluate(String expression) {
 
         List<String> tokens = tokenizer.tokenize(expression);
-        List<Symbol> symbols = symbolizer.toSymbols(tokens);
+        List<Symbol> symbols = symbolizer.symbolize(tokens);
 
         return null;
     }

@@ -19,7 +19,7 @@ class SymbolizerSpec extends Specification {
         symbolizer.symbolFactory = mockSymbolFactory
     }
 
-    def 'to symbols'() {
+    def 'symbolize'() {
 
         given:
             List<String> tokens = [
@@ -35,7 +35,7 @@ class SymbolizerSpec extends Specification {
             ]
 
         when:
-            List<Symbol> result = symbolizer.toSymbols(tokens)
+            List<Symbol> result = symbolizer.symbolize(tokens)
 
         then:
             1 * mockSymbolFactory.toSymbol('token1') >> mockSymbols[0]

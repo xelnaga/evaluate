@@ -13,7 +13,7 @@ public class Symbolizer {
         this.symbolFactory = symbolFactory;
     }
 
-    public List<Symbol> toSymbols(List<String> tokens) {
+    public List<Symbol> symbolize(List<String> tokens) {
 
         List<Symbol> symbols = new ArrayList<>();
 

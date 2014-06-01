@@ -10,6 +10,18 @@ class PlusOperatorSpec extends Specification {
         operator = new PlusOperator()
     }
 
+    def 'is operand'() {
+
+        expect:
+            !new PlusOperator().isOperand()
+    }
+
+    def 'is operator'() {
+
+        expect:
+            new PlusOperator().isOperator()
+    }
+
     def 'to string'() {
 
         expect:
